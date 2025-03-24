@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f4f6;
+}
+
+.heart-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    width: 50vh;
+    cursor: pointer;
+}
+
+  
