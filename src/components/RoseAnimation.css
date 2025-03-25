@@ -1,0 +1,79 @@
+/* Fullscreen Black Background */
+.rose-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Clickable Rose */
+  .rose-wrapper {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .rose-wrapper:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Rose Image */
+  .rose-image {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 10px #ff4d6d);
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  /* Glowing Effect */
+  @keyframes glow {
+    0% {
+      filter: drop-shadow(0 0 10px #ff4d6d);
+    }
+    100% {
+      filter: drop-shadow(0 0 20px #ff1e56);
+    }
+  }
+  
+  /* Floating Petals */
+  .floating-petal {
+    position: absolute;
+    font-size: 24px;
+    color: #ff4d6d;
+    animation: floatDown 3s ease-in-out forwards;
+  }
+  
+  @keyframes floatDown {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(150px);
+      opacity: 0;
+    }
+  }
+  
+  /* Glowing Text */
+  .rose-text {
+    position: absolute;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff4d6d;
+    text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff1e56;
+    animation: fadeInOut 2s ease-in-out;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  

@@ -1,0 +1,71 @@
+/* Center Container */
+.love-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ff758c, #ff7eb3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Clickable Heart */
+  .heart-icon {
+    font-size: 60px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Heart Beating Animation */
+  .heart-icon.beat {
+    animation: heartbeat 0.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.3);
+    }
+  }
+  
+  /* Floating Hearts */
+  .floating-heart {
+    position: absolute;
+    font-size: 24px;
+    animation: floatUp 2s ease-in-out forwards;
+  }
+  
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+  }
+  
+  /* "I Love You" Glowing Text */
+  .love-text {
+    position: absolute;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 10px #ff4d6d, 0 0 20px #ff4d6d, 0 0 30px #ff4d6d;
+    animation: fadeInOut 2.5s ease-in-out;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
