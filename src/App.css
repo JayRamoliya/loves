@@ -51,3 +51,46 @@
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  }
+  
+  .heart-wrapper {
+    position: relative;
+  }
+  
+  .heart {
+    width: 100px;
+    cursor: pointer;
+    transition: filter 0.3s ease;
+  }
+  
+  .heart-wrapper:hover .heart {
+    filter: drop-shadow(0px 0px 15px red);
+  }
+  
+  /* Floating hearts */
+  .floating-heart {
+    position: absolute;
+    font-size: 24px;
+    color: red;
+    animation: floatUp 1s ease-out;
+  }
+  
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+  }
+  
